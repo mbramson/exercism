@@ -22,3 +22,9 @@ mul((A,B), (C,D), (X,Y)) :-
 div((A,B), (C,D), (X,Y)) :-
   X is (A * C + B * D) / (C**2 + D**2),
   Y is (B * C - A * D) / (C**2 + D**2).
+
+exponent((R,I), (Rr,Ir)) :-
+  mul((e**R,0), (cos(I),sin(I)), (Rr,Ir)).
+
+
+
